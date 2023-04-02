@@ -22,7 +22,7 @@ import (
 	"time"
 )
 
-var APPNAME = "SealDice"
+var APPNAME = "SealDice改·千羽奏"
 var VERSION = "1.2.4 v20230319"
 
 // var VERSION_CODE = int64(1001000) // 991404
