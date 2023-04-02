@@ -137,7 +137,7 @@ func (d *Dice) registerCoreCommands() {
 	d.CmdMap["black"] = cmdBlack
 	d.CmdMap["ban"] = cmdBlack
 
-	HelpForFind := ".find/查询 <关键字> // 查找文档。关键字可以多个，用空格分割\n" +
+	HelpForFind := ".find/搜索 <关键字> // 查找文档。关键字可以多个，用空格分割\n" +
 		".find <数字ID> // 显示该ID的词条\n" +
 		".find --rand // 显示随机词条\n" +
 		".find <关键字> --num=10 // 需要更多结果"
@@ -239,7 +239,7 @@ func (d *Dice) registerCoreCommands() {
 			return CmdExecuteResult{Matched: true, Solved: true}
 		},
 	}
-	d.CmdMap["查询"] = cmdSearch
+	d.CmdMap["搜索"] = cmdSearch
 	d.CmdMap["find"] = cmdSearch
 
 	HelpForHelp := ".help // 查看本帮助\n" +
@@ -309,14 +309,9 @@ func (d *Dice) registerCoreCommands() {
 				return CmdExecuteResult{Matched: true, Solved: true}
 			}
 
-			text := "海豹核心 " + VERSION + "\n"
+			text := "海豹核心改·千羽奏 " + VERSION + "\n"
 			text += "===============\n"
-			text += ".help 骰点/娱乐/跑团/日志" + "\n"
-			text += ".help 扩展/其他/关于" + "\n"
-			text += ".help 骰主/协议" + "\n"
-			text += "官网: sealdice.com" + "\n"
-			//text += "手册(荐): https://dice.weizaima.com/manual/" + "\n"
-			text += "海豹群: 524364253" + "\n"
+			text += "千羽图书馆: 581228627" + "\n"
 			//text += "扩展指令请输入 .ext 和 .ext <扩展名称> 进行查看\n"
 			extra := DiceFormatTmpl(ctx, "核心:骰子帮助文本_附加说明")
 			if extra != "" {
